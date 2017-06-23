@@ -1,1 +1,2 @@
-Main-Class: com.souravpati.profile.Application
+Main-Class: Application
+
