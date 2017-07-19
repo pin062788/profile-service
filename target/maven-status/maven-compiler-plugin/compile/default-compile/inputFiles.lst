@@ -1,1 +1,6 @@
+/Users/souravpati/Development/profile-service/src/main/java/com/souravpati/profile/controller/ProfileController.java
 /Users/souravpati/Development/profile-service/src/main/java/com/souravpati/profile/Application.java
+/Users/souravpati/Development/profile-service/src/main/java/com/souravpati/profile/model/Result.java
+/Users/souravpati/Development/profile-service/src/main/java/com/souravpati/profile/service/ProfileService.java
+/Users/souravpati/Development/profile-service/src/main/java/com/souravpati/profile/util/SearchUtil.java
+/Users/souravpati/Development/profile-service/src/main/java/com/souravpati/profile/config/ElasticsearchConfig.java
