@@ -1,5 +1,6 @@
 com/souravpati/profile/config/ElasticsearchConfig$1.class
 com/souravpati/profile/util/SearchUtil.class
+com/souravpati/profile/model/Profile.class
 com/souravpati/profile/Application.class
 com/souravpati/profile/model/Result.class
 com/souravpati/profile/controller/ProfileController.class
