@@ -1,35 +1,40 @@
 package com.souravpati.profile.service;
 
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.souravpati.profile.model.Result;
-import org.apache.http.HttpEntity;
-import org.apache.http.nio.entity.NStringEntity;
-import org.apache.http.util.EntityUtils;
-import org.elasticsearch.client.Response;
-import org.elasticsearch.client.RestClient;
+
+import com.souravpati.profile.document.ProfileDocument;
+
+import com.souravpati.profile.repository.ProfileRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import java.util.Collections;
-import static com.souravpati.profile.util.SearchUtil.MATCH_ALL;
-import static com.souravpati.profile.util.SearchUtil.POST;
-import static com.souravpati.profile.util.SearchUtil.SEACRH_ENDPOINT;
-import static org.apache.http.entity.ContentType.APPLICATION_JSON;
+
+import java.util.ArrayList;
+
+import java.util.List;
 
 @Component
 public class ProfileService {
 
-    RestClient restClient;
+  // private RestClient restClient;
+    private ProfileRepository repository;
 
     @Autowired
-    public ProfileService(RestClient restClient) {
-        this.restClient = restClient;
+    public ProfileService( ProfileRepository repository) {
+        this.repository = repository;
+
     }
 
-    public String testEs() throws Exception{
+
+    public ProfileDocument getProfile() {
+        Iterable<ProfileDocument> documents = repository.findAll();
+        List<ProfileDocument> documentList = new ArrayList<>();
+        documents.forEach(documentList::add);
+        return documentList.get(0);
+    }
+
+
+   /* public String testEs() throws Exception {
 
         //index a document
         HttpEntity entity = new NStringEntity(
@@ -50,6 +55,6 @@ public class ProfileService {
 
         String result = jobj.get("hits").toString();
         return result;
-    }
+    }*/
 
 }
