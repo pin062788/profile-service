@@ -16,7 +16,7 @@ import java.util.List;
 @Component
 public class ProfileService {
 
-  // private RestClient restClient;
+    // private RestClient restClient;
     private ProfileRepository repository;
 
     @Autowired
@@ -33,8 +33,9 @@ public class ProfileService {
         return documentList.get(0);
     }
 
-
-   /* public String testEs() throws Exception {
+    /**Todo eventually need to use Elasticsearch http port on a different aws container ; for now the embedded ES will do */
+   /*
+   public String testEs() throws Exception {
 
         //index a document
         HttpEntity entity = new NStringEntity(
