@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea
+.idea/
 profile-service.iml
 target/generated-sources/
 target/classes/application.properties
@@ -7,3 +7,4 @@ target/classes/com/souravpati/profile/config/DatabaseConfiguration.class
 target/classes/com/souravpati/profile/document/
 target/classes/com/souravpati/profile/repository/
 target/classes/com/souravpati/profile/util/Constants.class
+/data
