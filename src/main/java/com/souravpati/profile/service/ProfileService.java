@@ -1,16 +1,12 @@
 package com.souravpati.profile.service;
 
 
-
 import com.souravpati.profile.document.ProfileDocument;
-
 import com.souravpati.profile.repository.ProfileRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 @Component
@@ -37,7 +33,6 @@ public class ProfileService {
    /*
    public String testEs() throws Exception {
 
-        //index a document
         HttpEntity entity = new NStringEntity(
                 MATCH_ALL, APPLICATION_JSON);
 
@@ -50,7 +45,7 @@ public class ProfileService {
         restClient.close();
 
         Gson gosn = new Gson();
-        //Result result = gosn.fromJson(EntityUtils.toString(indexResponse.getEntity()),Result.class);
+        Result result = gosn.fromJson(EntityUtils.toString(indexResponse.getEntity()),Result.class);
 
         JsonObject jobj = new Gson().fromJson(EntityUtils.toString(indexResponse.getEntity()), JsonObject.class);
 
