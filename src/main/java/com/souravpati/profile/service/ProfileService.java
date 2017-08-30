@@ -2,6 +2,7 @@ package com.souravpati.profile.service;
 
 
 import com.souravpati.profile.document.ProfileDocument;
+import com.souravpati.profile.model.Profile;
 import com.souravpati.profile.repository.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -27,6 +28,11 @@ public class ProfileService {
         List<ProfileDocument> documentList = new ArrayList<>();
         documents.forEach(documentList::add);
         return documentList.get(0);
+    }
+
+    public String createProfile(ProfileDocument profile) {
+        ProfileDocument document = repository.save(profile);
+        return document.getId();
     }
 
     /**Todo eventually need to use Elasticsearch http port on a different aws container ; for now the embedded ES will do */
