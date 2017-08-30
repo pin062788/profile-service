@@ -5,7 +5,7 @@ services:
     links:
       - "es:es"
     ports:
-      - "8081:8081"
+      - "80:8081"
   es:
     image: "elasticsearch:2.3.5"
     ports:    
