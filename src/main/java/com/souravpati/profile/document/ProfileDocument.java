@@ -16,6 +16,5 @@ public class ProfileDocument {
     private String id;
     private String firstName;
     private String lastName;
-    private List<String> technologies;
     private List<Company> companies;
 }
