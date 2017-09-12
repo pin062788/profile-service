@@ -27,7 +27,7 @@ public class ProfileController {
     }
 
     @CrossOrigin(origins = {URL1, URL2,URL3,URL4})
-    @PostMapping(value = "/profile", consumes = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/profile", consumes = APPLICATION_JSON_VALUE , produces = APPLICATION_JSON_VALUE )
     @ResponseStatus(CREATED)
     @ResponseBody
     public String createProfile(@RequestBody  ProfileDocument document) throws Exception {

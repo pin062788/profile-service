@@ -1,6 +1,7 @@
 package com.souravpati.profile.document;
 
 
+import com.souravpati.profile.model.Company;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -13,7 +14,8 @@ import java.util.Map;
 public class ProfileDocument {
     @Id
     private String id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private List<String> technologies;
-    private Map<String,String> companiesWithLocations;
+    private List<Company> companies;
 }
