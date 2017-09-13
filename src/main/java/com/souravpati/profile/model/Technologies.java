@@ -6,5 +6,5 @@ import lombok.Data;
 public class Technologies {
     private String name ;
     private  double yearsOfExp;
-    private double version;
+    private String version;
 }

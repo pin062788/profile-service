@@ -7,5 +7,5 @@ import java.util.List;
 public class Project {
     private String name ;
     private String  description;
-    private List<Technologies> technologies;
+    private List<String> environment;
 }
